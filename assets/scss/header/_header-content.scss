@@ -1,0 +1,23 @@
+.header-content {
+  position: relative;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    .btn:first-of-type {
+      margin-right: 20px;
+    }
+  }
+
+  &__title {
+    color: $color-light;
+    text-align: center;
+
+    margin: 0 0 53px 0;
+  }
+}
