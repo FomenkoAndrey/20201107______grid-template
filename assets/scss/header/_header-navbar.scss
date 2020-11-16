@@ -5,41 +5,49 @@
   }
 
   &__btn {
+    position: relative;
+
+    width: 30px;
+    height: $gap;
+    margin: 25px 0;
+
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+
     @include md-min {
       display: none;
     }
 
-    width: 30px;
-    height: $gap;
-    position: relative;
-    margin: 25px 0;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-
     &-row {
-      display: block;
       position: absolute;
-      height: 3px;
+
+      display: block;
+
       width: 50%;
-      background: $color-light;
-      opacity: 1;
+      height: 3px;
+
+      transition: 0.25s ease-in-out;
       transform: rotate(0deg);
-      transition: .25s ease-in-out;
+
+      opacity: 1;
+      background: $color-light;
 
       &:nth-child(even) {
         left: 50%;
+
         border-radius: 0 3px 3px 0;
       }
 
       &:nth-child(odd) {
-        left: 0px;
+        left: 0;
+
         border-radius: 3px 0 0 3px;
       }
 
       &:nth-child(1),
       &:nth-child(2) {
-        top: 0px;
+        top: 0;
       }
 
       &:nth-child(3),
@@ -51,7 +59,6 @@
       &:nth-child(6) {
         top: 18px;
       }
-
     }
 
     &.active span {
@@ -66,60 +73,69 @@
       }
 
       &:nth-child(1) {
-        left: 2.5px;
         top: 3.5px;
+        left: 2.5px;
       }
 
       &:nth-child(2) {
-        left: calc(50% - 2.5px);
         top: 3.5px;
+        left: calc(50% - 2.5px);
       }
 
       &:nth-child(3) {
         left: -50%;
+
         opacity: 0;
       }
 
       &:nth-child(4) {
         left: 100%;
+
         opacity: 0;
       }
 
       &:nth-child(5) {
-        left: 2.5px;
         top: 14.5px;
+        left: 2.5px;
       }
 
       &:nth-child(6) {
-        left: calc(50% - 2.5px);
         top: 14.5px;
+        left: calc(50% - 2.5px);
       }
     }
   }
 
   &__list {
-    list-style: none;
     margin: 0 (-$gap) 0 0;
     padding: 0;
+
+    list-style: none;
 
     @include md-min {
       display: grid;
       justify-content: end;
+
       grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
     }
     @include md {
-      display: none;
       position: absolute;
       top: 100%;
       right: $gap * 2;
-      background-color: rgba($color-gray-dark, 0.9);
+
+      display: none;
+
       text-align: right;
+
+      background-color: rgba($color-gray-dark, 0.9);
     }
   }
 
   &__link {
     display: block;
+
     padding: $gap;
+
     font-size: 1.125rem;
   }
 }
