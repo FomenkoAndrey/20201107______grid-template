@@ -20,33 +20,3 @@
 @import "sections/section-posts";
 
 @import "footer";
-
-
-
-
-
-@media (max-height: 640px) {
-  .skills__container {
-    grid-auto-rows: 200px;
-  }
-}
-
-
-@media (max-width: 992px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  .header-content__title {
-    margin: 0 0 43px 0;
-  }
-
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.875rem;
-  }
-  .header-content__title {
-    margin: 0 0 33px 0;
-  }
-}

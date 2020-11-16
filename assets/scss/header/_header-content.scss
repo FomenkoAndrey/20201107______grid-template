@@ -9,8 +9,18 @@
     display: flex;
     justify-content: center;
 
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .btn:first-of-type {
-      margin-right: 20px;
+      @include sm-min {
+        margin-right: $gap;
+      }
+      @include sm {
+        margin-bottom: $gap;
+      }
     }
   }
 
@@ -18,6 +28,16 @@
     color: $color-light;
     text-align: center;
 
-    margin: 0 0 53px 0;
+    @include lg-min {
+      margin: 0 0 53px 0;
+    }
+
+    @include lg-md {
+      margin: 0 0 43px 0;
+    }
+
+    @include md {
+      margin: 0 0 33px 0;
+    }
   }
 }
